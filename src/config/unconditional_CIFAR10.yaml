@@ -1,0 +1,7 @@
+dataset:
+  name: CIFAR10
+  image_size: 28
+  is_conditional: false
+  split: train
+
+device : cuda

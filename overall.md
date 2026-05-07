@@ -16,6 +16,8 @@ Therefore:
   2. Supports model inference
   3. Supports various sampling methods
   4. Computes the loss
+  5. generate data (input datasets , according to the mode)
+
 
 ---
 
@@ -29,8 +31,10 @@ Thus, we have:
 
 Actually:
 $x_t = \text{function}(x_0, \epsilon)$
-
 So the input contains the information of $x_0$ that the model is trained to learn.
+
+However , this process happens in GaussianDiffusion but not here.
+Because GaussianDiffusion has the generate mode , such as $epsilon%$ ,v  prediction , so we need to generate data in the model level.
 
 ---
 

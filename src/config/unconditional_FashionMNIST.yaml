@@ -1,0 +1,8 @@
+dataset:
+  name: FashionMNIST
+  image_size: 32
+  is_conditional: false
+  split: train
+
+device : cuda
+
