@@ -1,5 +1,5 @@
 from torch.utils.data import Dataset
-from load_data import load_data, load_image_folder 
+from .load_data import load_data, load_image_folder
 from pathlib import Path
 import random
 

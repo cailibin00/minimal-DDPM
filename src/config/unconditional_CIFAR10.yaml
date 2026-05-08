@@ -2,6 +2,19 @@ dataset:
   name: CIFAR10
   image_size: 28
   is_conditional: false
-  split: train
+  split: "train"
 
-device : cuda
+device : "cuda"
+
+model:
+  name: "None"
+  mode : "pred_noisy"
+
+train:
+  timesteps : 1000
+
+
+test:
+  forward_steps : 1000
+  add_noisy : True
+  return_process : True
