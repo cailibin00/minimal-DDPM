@@ -1,3 +1,4 @@
 dataset
 dataset\FashionMNIST
 dataset\cifar-10-python.tar.gz
+results\checkpoint

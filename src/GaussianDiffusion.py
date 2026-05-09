@@ -25,7 +25,7 @@ def linear_beta_schedule(timesteps):
     beta_end = scale * 0.02
     return torch.linspace(beta_start, beta_end, timesteps, dtype = torch.float64)
 
-
+# TODO:方差可以给模型一起来预测
 class GaussianDiffusion(Module):
     """
     1. 根据mode，用数据集来构建监督对象，供模型计算损失\n
@@ -227,11 +227,9 @@ class GaussianDiffusion(Module):
 
         :return: 推理结果，是三个mode之一
         """
-        if self.is_conditional:
-            return self.model(xt , condition , t)
-        else:
-            return self.model(xt , t)
+        return self.model(xt , t , condition)
     
+    # TODO：下面这两个函数要实现modelout : variance
     @torch.inference_mode()
     def _forward_pred_noisy_loops(self , xt , t:int , condition=None , add_noisy:bool=True , return_process:bool = False):
         """

@@ -9,6 +9,15 @@ device : "cuda"
 model:
   name: "None"
   mode : "pred_noisy"
+  init_dim : 64
+  dim_mults : (1 , 2 , 4 , 8)
+  image_dim : 3 
+  heads : 4
+  head_dim : 32
+  num_men_kv : 4
+  dropout : 0.0
+  learn_variance : False
+
 
 train:
   timesteps : 1000
@@ -18,3 +27,5 @@ test:
   forward_steps : 1000
   add_noisy : True
   return_process : True
+
+
